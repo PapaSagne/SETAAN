@@ -1,0 +1,57 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #080e00;
+  color: #f5f0e8;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes bounce-in {
+  0%   { opacity: 0; transform: scale(0.5) translateY(20px); }
+  60%  { opacity: 1; transform: scale(1.15) translateY(-5px); }
+  80%  { transform: scale(0.95) translateY(2px); }
+  100% { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+@keyframes bounce-out {
+  0%   { opacity: 1; transform: scale(1); }
+  30%  { transform: scale(1.1); }
+  100% { opacity: 0; transform: scale(0.5) translateY(-20px); }
+}
+
+.genre-tag-in {
+  animation: bounce-in 0.6s cubic-bezier(0.36, 0.07, 0.19, 0.97) forwards;
+}
+
+.genre-tag-out {
+  animation: bounce-out 0.5s ease forwards;
+}
+
+input:focus {
+  border-color: #2E4600 !important;
+  box-shadow: 0 0 12px rgba(46,70,0,0.4) !important;
+}
+
+.card-hover {
+  transition: all 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-4px);
+  border-color: #4a7000 !important;
+  box-shadow: 0 8px 30px rgba(46,70,0,0.3) !important;
+}
